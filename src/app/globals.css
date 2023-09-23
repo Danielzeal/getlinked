@@ -2,26 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+address {
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.text-stroke {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 2px;
+}
+
+.animate-ok {
+  animation: animate_ok 2s ease 0s infinite forwards;
+}
+
+@keyframes animate_ok {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(.5)
+  }
+  100% {
+    transform: scale(1)
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.animate-star {
+  animation: star 3s ease-in-out 0s infinite alternate-reverse;
 }
+
+@keyframes star {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0px);
+    transform: scale(.3);
+  }
+  100% {
+    transform: translateX(20px);
+    transform: scale(1);
+  }
+}
+.animate-star-left {
+  animation: star_left 3s ease-in-out 2s infinite alternate-reverse;
+}
+
+@keyframes star_left {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(0px);
+    transform: scale(.5);
+  }
+  100% {
+    transform: translateX(-20px);
+    transform: scale(1);
+  }
+}
+
+
