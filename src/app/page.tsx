@@ -18,7 +18,7 @@ export default function Home() {
       <Criteria />
       <Questions />
       <Timeline />
-      {/* <Partner /> */}
+      <Partner />
       <Trophy />
       <Policy />
       <Footer />

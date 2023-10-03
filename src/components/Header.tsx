@@ -5,17 +5,20 @@ import Container from "./Container";
 import MenuIcon from "./MenuIcon";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const MotionLink = motion(Link);
+import Btn from "./Btn";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { useRouter } from "next/navigation";
 
 const AnimateNavLink = ({
   delay,
   text,
   href,
+  onClick,
 }: {
   delay: number;
   text: string;
   href: string;
+  onClick: () => void;
 }) => {
   return (
     <motion.a
@@ -26,6 +29,7 @@ const AnimateNavLink = ({
         transition: { delay: delay },
       }}
       href={href}
+      onClick={onClick}
     >
       {text}
     </motion.a>
@@ -34,16 +38,15 @@ const AnimateNavLink = ({
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const router = useRouter();
 
   const handleMenu = () => {
-    console.log("clicked");
-
     setMenu((prev) => !prev);
   };
 
   return (
     <>
-      <header className='h-[90px] w-full fixed top-0 z-50 bg-primary'>
+      <header className='h-[90px] w-full fixed top-0 z-[100] bg-primary'>
         <div
           className={`absolute top-0 w-full h-screen bg-overlay bottom-0 z-[50] flex flex-col items-end p-6 ${
             menu ? "left-0" : "left-[100vw]"
@@ -56,20 +59,48 @@ const Header = () => {
               opacity: 1,
               transition: { delay: 0.5 },
             }}
-            className='bg-white w-[90%] h-[400px] relative text-black p-6 flex items-center rounded-md shadow-2xl'
+            className='w-[90%] bg-secondary h-[400px] relative text-black p-6 flex gap-6 justify-center rounded-md shadow-2xl flex-col'
           >
             <div
-              className='absolute right-6 top-6 text-2xl'
+              className='absolute right-6 top-6 text-white text-3xl'
               onClick={handleMenu}
             >
-              X
+              <AiOutlineCloseCircle />
             </div>
-            <nav className='flex flex-col gap-3 text-lg font-bold'>
-              <AnimateNavLink text='Timeline' delay={1} href='#timeline' />
-              <AnimateNavLink text='Overview' delay={1.2} href='#overview' />
-              <AnimateNavLink text='FAQs' delay={1.4} href='#faqs' />
-              <AnimateNavLink text='Contact' delay={1.6} href='/contact' />
+            <nav className='flex flex-col gap-4 text-lg font-bold uppercase text-white'>
+              <AnimateNavLink
+                text='Timeline'
+                delay={1}
+                href='#timeline'
+                onClick={handleMenu}
+              />
+              <AnimateNavLink
+                text='Overview'
+                delay={1.2}
+                href='#overview'
+                onClick={handleMenu}
+              />
+              <AnimateNavLink
+                text='FAQs'
+                delay={1.4}
+                href='#faqs'
+                onClick={handleMenu}
+              />
+              <AnimateNavLink
+                text='Contact'
+                delay={1.6}
+                href='/contact'
+                onClick={handleMenu}
+              />
             </nav>
+            <Btn
+              text='REGISTER'
+              className='!text-white w-full'
+              onClick={() => {
+                router.push("/register");
+                handleMenu();
+              }}
+            />
           </motion.div>
         </div>
         <Container>

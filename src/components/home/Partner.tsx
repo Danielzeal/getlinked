@@ -16,10 +16,10 @@ const Partner = () => {
         </div>
         <div className='border border-tertiary w-full p-10 grid grid-cols-3 gap-3'>
           <div className='flex flex-col gap-4'>
-            <div className='w-full md:h-36 h-12 border-r-2 border-tertiary'>
+            <div className='w-full md:h-36 h-12 border-r-2 border-tertiary md:px-8 md:py-4 p-2'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={"/img/boom.png"}
+                  src={"/img/liberty.png"}
                   alt=''
                   fill
                   className='object-contain'
@@ -27,10 +27,10 @@ const Partner = () => {
               </div>
             </div>
             <div className='w-[90%] h-[2px] bg-tertiary self-start' />
-            <div className='w-full md:h-36 h-12 border-r-2 border-tertiary'>
+            <div className='w-full md:h-36 h-12 border-r-2 border-tertiary md:px-8 md:py-4 p-2'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={"/img/boom.png"}
+                  src={"/img/Paybox.png"}
                   alt=''
                   fill
                   className='object-contain'
@@ -39,10 +39,10 @@ const Partner = () => {
             </div>
           </div>
           <div className='flex flex-col gap-4'>
-            <div className='w-full md:h-36 h-12'>
+            <div className='w-full md:h-36 h-12 md:px-8 md:py-4 p-2'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={"/img/boom.png"}
+                  src={"/img/libertypay.png"}
                   alt=''
                   fill
                   className='object-contain'
@@ -50,10 +50,10 @@ const Partner = () => {
               </div>
             </div>
             <div className='w-[90%] h-[2px] bg-tertiary self-center' />
-            <div className='w-full md:h-36 h-12'>
+            <div className='w-full md:h-36 h-12 md:px-8 md:py-4 p-2'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={"/img/boom.png"}
+                  src={"/img/wisper.png"}
                   alt=''
                   fill
                   className='object-contain'
@@ -62,10 +62,10 @@ const Partner = () => {
             </div>
           </div>
           <div className='flex flex-col gap-4'>
-            <div className='w-full md:h-36 h-12 border-l-2 border-tertiary'>
+            <div className='w-full md:h-36 h-12 border-l-2 border-tertiary md:px-8 md:py-4 p-2'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={"/img/boom.png"}
+                  src={"/img/winwise.png"}
                   alt=''
                   fill
                   className='object-contain'
@@ -73,10 +73,10 @@ const Partner = () => {
               </div>
             </div>
             <div className='w-[90%] h-[2px] bg-tertiary self-end' />
-            <div className='w-full border-l-2 border-tertiary md:h-36 h-12 bg-red-100'>
+            <div className='w-full border-l-2 border-tertiary md:h-36 h-12 md:px-8 md:py-4 p-2'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={"/img/boom.png"}
+                  src={"/img/visual.png"}
                   alt=''
                   fill
                   className='object-contain'
