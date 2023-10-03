@@ -2,15 +2,16 @@
 
 import { motion } from "framer-motion";
 
+type Prop = {
+  onClick: () => void;
+};
+
 const SpanDiv = ({ className }: { className: string }) => {
   return (
     <span className={`block bg-white h-[2px] rounded-md ${className}`}></span>
   );
 };
 
-type Prop = {
-  onClick: () => void;
-};
 const MenuIcon = ({ onClick }: Prop) => {
   return (
     <motion.div
