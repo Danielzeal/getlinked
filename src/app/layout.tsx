@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -22,9 +23,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${montserrat.variable} bg-primary text-white font-mont`}
+        className={`${montserrat.variable} bg-primary text-white font-mont scroll-smooth`}
       >
-        <main>{children}</main>
+        <div className='flex flex-col overflow-hidden'>
+          <Header />
+          <main className='flex-1'>{children}</main>
+        </div>
       </body>
     </html>
   );

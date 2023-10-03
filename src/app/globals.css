@@ -6,6 +6,10 @@ address {
   font-style: normal;
 }
 
+h1 {
+  line-height: 100px;
+}
+
 .text-stroke {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: blueviolet;
@@ -29,7 +33,7 @@ address {
 }
 
 .animate-star {
-  animation: star 3s ease-in-out 0s infinite alternate-reverse;
+  animation: star 3s ease-in-out 1s infinite alternate-reverse;
 }
 
 @keyframes star {
@@ -45,6 +49,7 @@ address {
     transform: scale(1);
   }
 }
+
 .animate-star-left {
   animation: star_left 3s ease-in-out 2s infinite alternate-reverse;
 }
@@ -59,6 +64,42 @@ address {
   }
   100% {
     transform: translateX(-20px);
+    transform: scale(1);
+  }
+}
+
+.animate-star-down {
+  animation: star_down 3s ease-in-out 4s infinite alternate-reverse;
+}
+
+@keyframes star_down {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+    transform: scale(.5);
+  }
+  100% {
+    transform: translateY(20px);
+    transform: scale(1);
+  }
+}
+
+.animate-star-top {
+  animation: star_top 2s ease-in-out 2s infinite alternate-reverse;
+}
+
+@keyframes star_top {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+    transform: scale(.5);
+  }
+  100% {
+    transform: translateY(-20px);
     transform: scale(1);
   }
 }

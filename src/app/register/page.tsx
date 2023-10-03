@@ -4,7 +4,6 @@ import FormContainer from "@/components/FormContainer";
 import Star from "@/components/Star";
 import Overlay from "@/components/register/Overlay";
 import RegisterForm from "@/components/register/RegisterForm";
-import RegisterHeader from "@/components/register/RegisterHeader";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -13,7 +12,6 @@ const RegisterPage = () => {
 
   return (
     <section className='relative overflow-hidden min-h-screen'>
-      <RegisterHeader />
       <div className='w-[300px] absolute h-[600px] rounded-full opacity-50 bg-tertiary blur-[80px] -z-[1]' />
       <div className='w-[400px] -z-[1] h-[200px] blur-[80px] right-8 bottom-0 absolute  opacity-50 rounded-full bg-tertiary' />
       <Star className='left-[400px] top-10 text-3xl animate-star text-tertiary' />

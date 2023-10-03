@@ -1,13 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Btn from "../Btn";
 import Container from "../Container";
 import Heading from "./Heading";
+import Star from "../Star";
+import { criterias } from "@/constant/data";
+import { motion } from "framer-motion";
 
 const Criteria = () => {
   return (
-    <section className='min-h-screen py-16 relative'>
-      <div className='absolute w-[300px] h-[400px] bg-purple-600 rounded-full right-0 -bottom-24 blur-[100px] z-20 text-white opacity-70' />
+    <section className='min-h-screen py-[110px]' id='#overview'>
       <Container>
+        <Star className='left-[200px] top-10 text-3xl animate-star-top z-10 text-tertiary' />
+        <Star className='bottom-[100px] right-[50px] text-4xl animate-star z-10 text-tertiary' />
+        <Star className='w-full flex items-center justify-center h-full text-2xl animate-star-left z-10' />
+        <Star className='bottom-[100px] left-12 animate-star-top text-2xl z-10 text-tertiary' />
+        <Star className='right-[300px] top-16 text-3xl animate-star-down z-10' />
+        <div className='absolute md:w-[300px] w-10 h-10 md:h-[300px] bg-purple-600 bottom-10 rounded-full left-[40px] blur-[100px] text-white opacity-80' />
+        <div className='absolute w-[200px] h-[200px] md:w-[300px] md:h-[400px] bg-purple-600 rounded-full right-0 -bottom-[300px] blur-[100px] text-white opacity-70' />
         <div className='flex lg:flex-row flex-col lg:gap-10 gap-4  h-full items-center justify-center'>
           <div className='lg:w-1/2 w-full sm:h-[500px] h-[275px] relative'>
             <div className='w-full h-full  relative'>
@@ -18,47 +29,21 @@ const Criteria = () => {
                 className='object-contain'
               />
             </div>
-            <div className='hidden lg:block absolute xl:w-24 w-16 h-16 xl:top-0 top-8 left-[68px] xl:h-24 bg-button-gradient rounded-full  -z-[1]' />
+            <div className='hidden lg:block absolute xl:w-24 w-16 h-16 xl:top-0 top-8 left-[68px] xl:h-24 bg-button-gradient rounded-full -z-[1]' />
           </div>
           <div className='lg:w-1/2 w-full lg:text-start text-center text-xs md:text-sm'>
             <Heading text='Judging Criteria' colorText='Key Attributes' />
             <ul className='flex flex-col leading-6 gap-4 mb-12'>
-              <li>
-                <span className='text-tertiary'>
-                  Innovation and Creativity:
-                </span>{" "}
-                Evaluate the uniqueness and creativity of the solution. Consider
-                whether it addresses a real-world problem in a novel way or
-                introduces innovative features.
-              </li>
-              <li>
-                <span className='text-tertiary'>Functionality:</span> Assess how
-                well the solution works. Does it perform its intended functions
-                effectively and without major issues? Judges would consider the
-                completeness and robustness of the solution.
-              </li>
-              <li>
-                <span className='text-tertiary'>Impact and Relevance:</span>{" "}
-                Determine the potential impact of the solution in the real
-                world. Does it address a significant problem, and is it relevant
-                to the target audience? Judges would assess the potential
-                social, economic, or environmental benefits.
-              </li>
-              <li>
-                <span className='text-tertiary'>Technical Complexity:</span>{" "}
-                Evaluate the technical sophistication of the solution. Judges
-                would consider the complexity of the code, the use of advanced
-                technologies or algorithms, and the scalability of the solution.
-              </li>
-              <li>
-                <span className='text-tertiary'>
-                  Adherence to Hackathon Rules:
-                </span>{" "}
-                Judges will Ensure that the team adhered to the rules and
-                guidelines of the hackathon, including deadlines, use of
-                specific technologies or APIs, and any other
-                competition-specific requirements.
-              </li>
+              {criterias.map((c) => (
+                <motion.li
+                  key={c.id}
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <span className='text-tertiary'>{c.header}:</span> {c.body}
+                </motion.li>
+              ))}
             </ul>
             <Btn text='Read More' />
           </div>

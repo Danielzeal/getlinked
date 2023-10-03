@@ -2,12 +2,40 @@ import Image from "next/image";
 import Container from "../Container";
 import Heading from "./Heading";
 
+type Props = {
+  amount: string;
+  place: string;
+  position: string;
+};
+
+const Prize = ({ amount, place, position }: Props) => {
+  return (
+    <div className='text-center h-1/2'>
+      <h2 className='lg:text-4xl sm:text-2xl text-xs font-bold'>{position}</h2>
+      <p className='lg:text-2xl text-xs sm:text-base font-semibold'>{place}</p>
+      <p className='xl:text-[32px] sm:text-2xl text-sm font-bold text-tertiary'>
+        {"#"}
+        {amount}
+      </p>
+    </div>
+  );
+};
+
 const Trophy = () => {
   return (
-    <section className='w-full h-screen bg-[#100b20] relative'>
+    <section className='w-full bg-[#100b20] py-8 overflow-hidden'>
       <Container>
-        <div className='w-full h-full flex items-center justify-between'>
-          <div className='relative h-[450px] w-1/2'>
+        <div className='flex text-center md:text-start md:items-end items-center justify-center md:justify-end mb-4'>
+          <div>
+            <Heading text='Prizes and' colorText='Rewards' />
+            <p>
+              Highlight of the prizes or rewards for winners and for
+              participants.
+            </p>
+          </div>
+        </div>
+        <div className='w-full min-h-[500px] h-[500px] flex flex-col md:flex-row items-center justify-center gap-8'>
+          <div className='relative md:h-full h-1/2 md:w-1/2 w-full'>
             <Image
               src={"/img/trophy.png"}
               alt=''
@@ -15,63 +43,40 @@ const Trophy = () => {
               className='object-contain'
             />
           </div>
-          <div className='w-1/2'>
-            <div className='text-center md:text-start md:w-[400px] mb-[200px]'>
-              <Heading text='Prizes and' colorText='Rewards' />
-              <p>
-                Highlight of the prizes or rewards for winners and for
-                participants.
-              </p>
-            </div>
-            <div className='flex justify-between w-full'>
-              <div className='w-[200px] h-[300px] border border-tertiary bg-tertiary-opacity rounded-lg gap-10 flex flex-col items-center justify-center relative'>
+
+          <div className='flex justify-center w-full md:w-1/2 h-1/2 lg:gap-4 gap-2 items-center md:pt-24 pt-12'>
+            <div className='w-full md:h-[300px] sm:h-[200px] h-full border border-tertiary bg-tertiary-opacity rounded-lg'>
+              <div className='relative w-full h-1/2 xl:scale-[1.3] -top-14'>
                 <Image
                   src={"/img/silver.png"}
                   alt=''
-                  width={180}
-                  height={180}
-                  className='absolute -top-[100px]'
+                  fill
+                  className='object-contain'
                 />
-                <div className='text-center pt-[100px]'>
-                  <h2 className='text-4xl font-bold'>2nd</h2>
-                  <p className='text-2xl font-semibold'>Runner</p>
-                  <p className='text-[32px] font-bold text-tertiary'>
-                    N300,000
-                  </p>
-                </div>
               </div>
-              <div className='w-[200px] h-[300px] border border-[#903AFF] bg-primary-opacity rounded-lg gap-10 flex flex-col items-center justify-center relative scale-y-105'>
+              <Prize amount='300,000' place='Runner' position='2nd' />
+            </div>
+            <div className='w-full h-full border border-[#903AFF] bg-primary-opacity rounded-lg md:h-[300px] sm:h-[200px] scale-y-105'>
+              <div className='relative w-full h-1/2 -top-14 md:scale-150 scale-125 mb-1'>
                 <Image
                   src={"/img/gold.png"}
                   alt=''
-                  width={300}
-                  height={350}
-                  className='absolute -top-[100px]'
+                  fill
+                  className='object-contain'
                 />
-                <div className='text-center pt-[110px]'>
-                  <h2 className='text-4xl font-bold'>1st</h2>
-                  <p className='text-2xl font-semibold'>Runner</p>
-                  <p className='text-[32px] font-bold text-[#903AFF]'>
-                    N400,000
-                  </p>
-                </div>
               </div>
-              <div className='w-[200px] h-[300px] border border-tertiary bg-tertiary-opacity rounded-lg gap-10 flex flex-col items-center justify-center relative'>
+              <Prize amount='400,000' place='Runner' position='1st' />
+            </div>
+            <div className='w-full h-full border border-tertiary bg-tertiary-opacity rounded-lg flex flex-col md:h-[300px] sm:h-[200px]'>
+              <div className='relative w-full h-1/2 xl:scale-[1.3] -top-14'>
                 <Image
                   src={"/img/bronze.png"}
                   alt=''
-                  width={180}
-                  height={180}
-                  className='absolute -top-[100px]'
+                  fill
+                  className='object-contain'
                 />
-                <div className='text-center pt-[100px]'>
-                  <h2 className='text-4xl font-bold'>3rd</h2>
-                  <p className='text-2xl font-semibold'>Runner</p>
-                  <p className='text-[32px] font-bold text-tertiary'>
-                    N150,000
-                  </p>
-                </div>
               </div>
+              <Prize amount='150,000' place='Runner' position='3rd' />
             </div>
           </div>
         </div>

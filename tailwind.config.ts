@@ -22,6 +22,7 @@ const config: Config = {
         "tertiary-secondary": "#ff26b9",
         "form-blur": "rgba( 0, 0, 0, 0.25)",
         overlay: "rgba(21, 14, 40, 0.9)",
+        "border-color": "rgba(255, 255, 255, 0.2)",
       },
       fontFamily: {
         mont: ["var(--font-mont)", "serif"],
