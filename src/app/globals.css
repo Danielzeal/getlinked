@@ -104,4 +104,20 @@ h1 {
   }
 }
 
+.animate-img {
+  animation: img 3s ease-in-out 0s infinite alternate-reverse;
+}
+
+@keyframes img {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 

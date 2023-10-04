@@ -5,7 +5,7 @@ const ContactAddress = () => {
     <div className='sm:w-2/5 w-full order-2 sm:order-1'>
       <div className='flex flex-col gap-4'>
         <div className='hidden sm:flex flex-col gap-4'>
-          <h1 className='text-[32px] font-semibold text-tertiary'>
+          <h1 className='text-[32px] font-semibold text-tertiary font-lora'>
             Get in touch
           </h1>
           <p>

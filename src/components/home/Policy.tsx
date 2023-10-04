@@ -20,16 +20,20 @@ const Policy = () => {
           <div className='absolute md:w-[200px] w-10 h-10 md:h-[200px] bg-purple-600 rounded-full left-[70px] blur-[100px] -z-[1] text-white opacity-70' />
           <div className='absolute w-[300px] h-[300px] bg-purple-600 rounded-full right-[70px] bottom-32 blur-[100px] -z-[1] opacity-30' />
           <div className='md:w-1/2 w-full text-xs md:text-md'>
-            <div className='text-center'>
-              <Heading text='Privacy Policy and' colorText='Terms' />
+            <div className='text-center md:text-start'>
+              <Heading
+                text='Privacy Policy and'
+                colorText='Terms'
+                xDirection={-100}
+              />
               <p className='opacity-80'>Last updated on September 12, 2023</p>
-              <p className='my-10'>
+              <p className='my-10 md:text-base text-sm'>
                 Below are our privacy & policy, which outline a lot of goodies.
                 it’s our aim to always take of our participant
               </p>
             </div>
-            <div className='py-8 px-4 border border-tertiary'>
-              <p className='text-center'>
+            <div className='py-8 px-4 border border-tertiary md:text-base'>
+              <p className='text-center md:text-start'>
                 At getlinked tech Hackathon 1.0, we value your privacy and are
                 committed to protecting your personal information. This Privacy
                 Policy outlines how we collect, use, disclose, and safeguard
@@ -37,7 +41,7 @@ const Policy = () => {
                 participating in our event, you consent to the practices
                 described in this policy.
               </p>
-              <div className='my-6 flex flex-col gap-3 text-xs'>
+              <div className='my-6 flex flex-col gap-3 text-xs md:text-sm text-center md:text-start'>
                 <h3 className='text-tertiary font-bold'>
                   Licensing Policy <br />{" "}
                 </h3>
@@ -45,14 +49,14 @@ const Policy = () => {
               </div>
               <ul className='mb-6 flex flex-col gap-4'>
                 <li className='flex gap-4'>
-                  <AiFillCheckCircle className='text-green-500' />
+                  <AiFillCheckCircle className='text-green-500 text-xl' />
                   <span>
                     The Standard License grants you a non-exclusive right to
                     navigate and register for our event
                   </span>
                 </li>
                 <li className='flex gap-4'>
-                  <AiFillCheckCircle className='text-green-500' />
+                  <AiFillCheckCircle className='text-green-500 text-xl' />
                   You are licensed to use the item available at any free source
                   sites, for your project developement
                 </li>
@@ -64,17 +68,19 @@ const Policy = () => {
             <div className='relative h-[300px] md:h-[500px] w-full'>
               <Image
                 src={"/img/privacy.png"}
-                alt=''
+                alt='privacy auth'
                 fill
+                sizes='(min-width: 1540px) 624px, (min-width: 1360px) 584px, (min-width: 780px) 44.64vw, calc(100vw - 80px)'
                 className='object-contain -top-[100px]'
               />
             </div>
             <div className='relative h-[400px] md:h-[600px] w-full -top-28 md:-top-[300px]'>
               <Image
                 src={"/img/lock.png"}
-                alt=''
+                alt='privacy'
                 fill
-                className='object-contain'
+                sizes='(min-width: 1540px) 624px, (min-width: 1360px) 584px, (min-width: 780px) 44.64vw, calc(100vw - 80px)'
+                className='object-contain animate-img'
               />
             </div>
           </div>

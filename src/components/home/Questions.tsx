@@ -22,11 +22,12 @@ const Questions = () => {
               <p className='text-[150px] text-stroke leading-none'>?</p>
               <p className='text-7xl text-stroke leading-none'>?</p>
             </div>
-            <div className='relative w-full lg:h-[90%] md:h-[60%] h-[350px]'>
+            <div className='relative w-full lg:h-[90%] md:h-[60%] h-[350px] animate-img'>
               <Image
                 src={"/img/question.png"}
-                alt=''
+                alt='frequently ask questions'
                 fill
+                sizes='(min-width: 1540px) 768px, (min-width: 1360px) 720px, (min-width: 1040px) calc(48vw + 77px), (min-width: 780px) calc(50vw - 40px), calc(100vw - 80px)'
                 className='object-contain'
               />
             </div>

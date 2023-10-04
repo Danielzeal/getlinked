@@ -3,6 +3,11 @@ import Container from "@/components/Container";
 import FormContainer from "@/components/FormContainer";
 import ContactAddress from "@/components/contact/ContactAddress";
 import Star from "@/components/Star";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "GetLinked - Contact",
+};
 
 const ContactPage = () => {
   return (

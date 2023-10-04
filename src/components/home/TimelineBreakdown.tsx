@@ -28,7 +28,7 @@ const Breakdown = ({ heading, body, num, first, second, time }: Props) => {
         </div>
       </div>
       <div className={`md:w-1/2 w-full flex flex-col md:gap-4 gap-1 ${first}`}>
-        <h2 className='text-tertiary md:text-2xl font-bold text-xs sm:text-sm'>
+        <h2 className='text-tertiary md:text-2xl font-bold text-xs sm:text-sm font-lora'>
           {heading}
         </h2>
         <p className='md:text-base text-xs sm:text-sm'>{body}</p>

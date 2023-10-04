@@ -18,7 +18,11 @@ const HeroSection = () => {
         <div className='absolute md:w-[200px] w-10 h-10 md:h-[200px] bg-purple-600 rounded-full left-[70px] blur-[100px] -z-10 text-white opacity-70' />
         <div className='absolute w-[300px] h-[300px] bg-purple-600 rounded-full right-[120px] top-32 blur-[100px] -z-[1] opacity-30' />
         <div className='z-50 h-[10%]'>
-          <p className='md:text-end xl:text-4xl lg:text-3xl md:text-2xl text-xs italic font-bold mb-8'>
+          <motion.p
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className='md:text-end xl:text-4xl lg:text-3xl md:text-2xl text-xs italic font-bold mb-8'
+          >
             Igniting a Revolution in{" "}
             <span className='w-full h-full relative'>
               HR Innovation
@@ -27,29 +31,45 @@ const HeroSection = () => {
                   src={"/img/vec.png"}
                   alt=''
                   fill
+                  sizes='(min-width: 1280px) 242px, (min-width: 1040px) 202px, (min-width: 780px) 161px, 81px'
                   className='object-contain'
                 />
               </span>
             </span>
-          </p>
+          </motion.p>
         </div>
         <div className='flex lg:flex-row flex-col gap-10 md:gap-4 h-[90%]'>
           <div className='lg:w-1/2 flex md:gap-12 gap-6 flex-col text-center lg:text-start h-full items-center justify-center'>
             <div>
-              <h1 className='md:text-6xl text-3xl font-bold relative'>
+              <motion.h1
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                className='md:text-6xl text-3xl font-bold relative font-lora md:leading-[150%]'
+              >
                 getlinked Tech Hackathon{" "}
                 <span className='text-tertiary'>1.0</span>⛓️💥
-                <span className='absolute -top-12 right-[33%] rotate-45'>
+                <span className='absolute md:-top-12 md:right-[33%] right-[20%] rotate-45 -top-6'>
                   💡
                 </span>
-              </h1>
-              <p className='mt-4 mb-8'>
+              </motion.h1>
+              <motion.p
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.7, duration: 1 }}
+                className='mt-4 mb-8'
+              >
                 Participate in getlinked tech Hackathon 2023 stand a chance to
                 win a Big prize
-              </p>
+              </motion.p>
               <Btn text='register' />
             </div>
-            <div className='flex lg:self-start gap-4 items-center justify-center'>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1.2, duration: 1 }}
+              className='flex lg:self-start gap-4 items-center justify-center'
+            >
               <p>
                 <span className='xl:text-5xl text-4xl'>00</span>H
               </p>
@@ -59,22 +79,30 @@ const HeroSection = () => {
               <p>
                 <span className='xl:text-5xl text-4xl'>00</span>S
               </p>
-            </div>
+            </motion.div>
           </div>
-          <div className='lg:w-1/2 h-full w-full relative'>
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 1.5, duration: 2 }}
+            className='lg:w-1/2 h-full w-full relative'
+          >
             <Image
               src={"/img/virtual-glasses.png"}
               alt=''
               fill
+              priority={true}
+              sizes='(min-width: 1540px) 632px, (min-width: 1360px) 592px, (min-width: 1040px) calc(40vw + 56px), calc(100vw - 80px)'
               className='object-contain'
             />
             <Image
               src={"/img/img02.png"}
               alt=''
               fill
+              sizes='(min-width: 1540px) 632px, (min-width: 1360px) 592px, (min-width: 1040px) calc(40vw + 56px), calc(100vw - 80px)'
               className='object-contain animate-pulse'
             />
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>

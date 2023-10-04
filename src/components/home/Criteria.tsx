@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const Criteria = () => {
   return (
-    <section className='min-h-screen py-[110px]' id='#overview'>
+    <section className='min-h-screen py-[110px]' id='overview'>
       <Container>
         <Star className='left-[200px] top-10 text-3xl animate-star-top z-10 text-tertiary' />
         <Star className='bottom-[100px] right-[50px] text-4xl animate-star z-10 text-tertiary' />
@@ -21,18 +21,29 @@ const Criteria = () => {
         <div className='absolute w-[200px] h-[200px] md:w-[300px] md:h-[400px] bg-purple-600 rounded-full right-0 -bottom-[300px] blur-[100px] text-white opacity-70' />
         <div className='flex lg:flex-row flex-col lg:gap-10 gap-4  h-full items-center justify-center'>
           <div className='lg:w-1/2 w-full sm:h-[500px] h-[275px] relative'>
-            <div className='w-full h-full  relative'>
+            <motion.div
+              className='w-full h-full  relative'
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
               <Image
                 fill
                 src={"/img/criteria.png"}
-                alt=''
-                className='object-contain'
+                alt='judging criteria'
+                sizes='(min-width: 1540px) 620px, (min-width: 1360px) 580px, (min-width: 1040px) calc(40vw + 44px), calc(100vw - 80px)'
+                className='object-contain animate-img'
               />
-            </div>
+            </motion.div>
             <div className='hidden lg:block absolute xl:w-24 w-16 h-16 xl:top-0 top-8 left-[68px] xl:h-24 bg-button-gradient rounded-full -z-[1]' />
           </div>
           <div className='lg:w-1/2 w-full lg:text-start text-center text-xs md:text-sm'>
-            <Heading text='Judging Criteria' colorText='Key Attributes' />
+            <Heading
+              text='Judging Criteria'
+              colorText='Key Attributes'
+              xDirection={100}
+            />
             <ul className='flex flex-col leading-6 gap-4 mb-12'>
               {criterias.map((c) => (
                 <motion.li

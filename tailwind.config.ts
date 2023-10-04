@@ -25,8 +25,7 @@ const config: Config = {
         "border-color": "rgba(255, 255, 255, 0.2)",
       },
       fontFamily: {
-        mont: ["var(--font-mont)", "serif"],
-        display: ["sans-serif"],
+        lora: ["var(--font-lora)", "serif"],
       },
       maxWidth: {
         "8xl": "1320px",

@@ -25,14 +25,16 @@ const Introduction = () => {
             <Image
               fill
               src={"/img/idea.png"}
-              alt=''
-              className='object-contain'
+              alt='introduction to getlinked'
+              sizes='(min-width: 1540px) 758px, (min-width: 1360px) 710px, (min-width: 780px) 53.57vw, calc(100vw - 80px)'
+              className='object-contain animate-img'
             />
           </motion.div>
           <div className='md:w-2/5 w-full relative text-center md:text-start'>
             <Heading
               text='Introduction to getlinked'
               colorText='tech Hackathon 1.0'
+              xDirection={100}
             />
             <motion.p
               className='md:text-sm text-xs  text-justify'

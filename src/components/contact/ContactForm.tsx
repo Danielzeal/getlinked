@@ -6,7 +6,7 @@ const ContactForm = () => {
   return (
     <form className='flex flex-col gap-6'>
       <div className='text-xl text-tertiary font-semibold'>
-        <h1>Questions or need assistance?</h1>
+        <h1 className='font-lora font-medium'>Questions or need assistance?</h1>
         <p>Let us know about it!</p>
         <p className='text-white text-xs mt-6 sm:hidden'>
           Email us below to any question related to our event

@@ -14,7 +14,7 @@ const RegisterForm = ({ setSuccess }: Props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1 className='text-tertiary text-[32px] font-semibold hidden md:block'>
+      <h1 className='text-tertiary text-[32px] font-semibold hidden md:block font-lora'>
         Register
       </h1>
       <div className='flex items-end md:gap-2 mb-6 md:mt-10 mt-4'>

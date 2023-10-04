@@ -27,7 +27,7 @@ const Trophy = () => {
       <Container>
         <div className='flex text-center md:text-start md:items-end items-center justify-center md:justify-end mb-4'>
           <div>
-            <Heading text='Prizes and' colorText='Rewards' />
+            <Heading text='Prizes and' colorText='Rewards' xDirection={-100} />
             <p>
               Highlight of the prizes or rewards for winners and for
               participants.
@@ -35,11 +35,12 @@ const Trophy = () => {
           </div>
         </div>
         <div className='w-full min-h-[500px] h-[500px] flex flex-col md:flex-row items-center justify-center gap-8'>
-          <div className='relative md:h-full h-1/2 md:w-1/2 w-full'>
+          <div className='relative md:h-full h-1/2 md:w-1/2 w-full animate-img'>
             <Image
               src={"/img/trophy.png"}
-              alt=''
+              alt='trophy'
               fill
+              sizes='(min-width: 1540px) 624px, (min-width: 1360px) 584px, (min-width: 780px) 44.64vw, calc(100vw - 80px)'
               className='object-contain'
             />
           </div>
@@ -49,8 +50,9 @@ const Trophy = () => {
               <div className='relative w-full h-1/2 xl:scale-[1.3] -top-14'>
                 <Image
                   src={"/img/silver.png"}
-                  alt=''
+                  alt='silver winner prize'
                   fill
+                  sizes='(min-width: 1540px) 195px, (min-width: 1360px) 182px, (min-width: 780px) 13.93vw, calc(33.26vw - 34px)'
                   className='object-contain'
                 />
               </div>
@@ -60,7 +62,8 @@ const Trophy = () => {
               <div className='relative w-full h-1/2 -top-14 md:scale-150 scale-125 mb-1'>
                 <Image
                   src={"/img/gold.png"}
-                  alt=''
+                  alt='gold winner prize'
+                  sizes='(min-width: 1540px) 195px, (min-width: 1360px) 182px, (min-width: 780px) 13.93vw, calc(33.26vw - 34px)'
                   fill
                   className='object-contain'
                 />
@@ -71,8 +74,9 @@ const Trophy = () => {
               <div className='relative w-full h-1/2 xl:scale-[1.3] -top-14'>
                 <Image
                   src={"/img/bronze.png"}
-                  alt=''
+                  alt='bronze winner prize'
                   fill
+                  sizes='(min-width: 1540px) 195px, (min-width: 1360px) 182px, (min-width: 780px) 13.93vw, calc(33.26vw - 34px)'
                   className='object-contain'
                 />
               </div>

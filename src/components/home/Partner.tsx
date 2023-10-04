@@ -6,7 +6,7 @@ const Partner = () => {
     <section className='py-10'>
       <Container>
         <div className='mb-16 text-center sm:text-sm text-xs px-16'>
-          <h1 className='sm:text-2xl text-base font-bold'>
+          <h1 className='sm:text-3xl text-xl font-bold font-lora mb-2'>
             Partners and Sponsors
           </h1>
           <p>
@@ -20,8 +20,9 @@ const Partner = () => {
               <div className='w-full h-full relative'>
                 <Image
                   src={"/img/liberty.png"}
-                  alt=''
+                  alt='liberty logo'
                   fill
+                  sizes='(min-width: 1540px) 325px, (min-width: 1340px) 299px, (min-width: 780px) calc(30.93vw - 109px), calc(33.26vw - 80px)'
                   className='object-contain'
                 />
               </div>
@@ -31,8 +32,9 @@ const Partner = () => {
               <div className='w-full h-full relative'>
                 <Image
                   src={"/img/Paybox.png"}
-                  alt=''
+                  alt='playbox logo'
                   fill
+                  sizes='(min-width: 1540px) 325px, (min-width: 1340px) 299px, (min-width: 780px) calc(30.93vw - 109px), calc(33.26vw - 80px)'
                   className='object-contain'
                 />
               </div>
@@ -43,8 +45,9 @@ const Partner = () => {
               <div className='w-full h-full relative'>
                 <Image
                   src={"/img/libertypay.png"}
-                  alt=''
+                  alt='libertypay logo'
                   fill
+                  sizes='(min-width: 1540px) 327px, (min-width: 1340px) 301px, (min-width: 780px) calc(30.93vw - 107px), calc(33.26vw - 78px)'
                   className='object-contain'
                 />
               </div>
@@ -54,8 +57,9 @@ const Partner = () => {
               <div className='w-full h-full relative'>
                 <Image
                   src={"/img/wisper.png"}
-                  alt=''
+                  alt='wisper logo'
                   fill
+                  sizes='(min-width: 1540px) 327px, (min-width: 1340px) 301px, (min-width: 780px) calc(30.93vw - 107px), calc(33.26vw - 78px)'
                   className='object-contain'
                 />
               </div>
@@ -66,7 +70,8 @@ const Partner = () => {
               <div className='w-full h-full relative'>
                 <Image
                   src={"/img/winwise.png"}
-                  alt=''
+                  alt='winrise logo'
+                  sizes='(min-width: 1540px) 325px, (min-width: 1340px) 299px, (min-width: 780px) calc(30.93vw - 109px), calc(33.26vw - 80px)'
                   fill
                   className='object-contain'
                 />
@@ -77,8 +82,9 @@ const Partner = () => {
               <div className='w-full h-full relative'>
                 <Image
                   src={"/img/visual.png"}
-                  alt=''
+                  alt='visual plus logo'
                   fill
+                  sizes='(min-width: 1540px) 325px, (min-width: 1340px) 299px, (min-width: 780px) calc(30.93vw - 109px), calc(33.26vw - 80px)'
                   className='object-contain'
                 />
               </div>

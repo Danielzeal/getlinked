@@ -7,11 +7,9 @@ const Footer = () => {
   return (
     <footer className='md:p-8 py-6 bg-[#100b20]'>
       <Container>
-        <Star className='left-[200px] top-10 text-3xl animate-star text-tertiary z-20' />
         <Star className='bottom-[100px] right-[50px] text-4xl text-white animate-star z-20' />
         <Star className='w-full flex items-center justify-center h-full text-2xl animate-star-left z-20' />
-        <Star className='bottom-[100px] left-12 animate-star text-2xl z-20' />
-        <Star className='right-[300px] top-16 text-3xl animate-star-left z-20 text-tertiary' />
+        <Star className='bottom-[100px] left-12 animate-star text-2xl z-20 text-tertiary' />
         <div className='flex md:flex-row flex-col gap-6 text-xs'>
           <div className='md:w-2/4 w-full flex flex-col md:justify-between gap-6'>
             <div>

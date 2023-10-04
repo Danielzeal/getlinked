@@ -10,7 +10,7 @@ const FAQs = () => {
 
   return (
     <div className='text-sm lg:w-2/5 w-full text-center lg:text-start'>
-      <Heading text='Frequently Ask' colorText='Questions' />
+      <Heading text='Frequently Ask' colorText='Questions' xDirection={-100} />
       <p className='mb-8'>
         We got answers to the questions that you might want to ask about
         getlinked Hackathon 1.0

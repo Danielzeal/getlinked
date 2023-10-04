@@ -20,7 +20,7 @@ const Timeline = () => {
     >
       <Container>
         <div className='text-center md:mb-20 mb-6 flex items-center justify-center gap-4 flex-col'>
-          <h1>Timeline</h1>
+          <h1 className='font-lora font-bold sm:text-3xl text-xl'>Timeline</h1>
           <p className='w-[320px]'>
             Here is the breakdown of the time we anticipate using for the
             upcoming event.

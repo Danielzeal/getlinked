@@ -20,7 +20,11 @@ const GuideLine = () => {
         <div className='absolute md:w-[300px] w-10 h-10 md:h-[300px] bg-purple-600 rounded-full -bottom-20 right-[40px] blur-[100px] text-white opacity-80' />
         <div className='flex flex-col gap-4 md:flex-row h-full items-center justify-center py-4 md:py-8'>
           <div className='md:w-2/5 w-full relative text-center md:text-start order-2 md:order-1'>
-            <Heading text='Rules and' colorText='Guildlines' />
+            <Heading
+              text='Rules and'
+              colorText='Guildlines'
+              xDirection={-100}
+            />
             <motion.p
               className='md:text-sm text-xs text-justify'
               initial={{ x: -100, opacity: 0 }}
@@ -47,8 +51,9 @@ const GuideLine = () => {
             <Image
               fill
               src={"/img/guidelines.png"}
-              alt=''
-              className='object-contain'
+              alt='rules and quidelines'
+              sizes='(min-width: 1540px) 758px, (min-width: 1360px) 710px, (min-width: 780px) 53.57vw, calc(100vw - 80px)'
+              className='object-contain animate-img'
             />
           </motion.div>
         </div>
